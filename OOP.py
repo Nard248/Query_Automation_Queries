@@ -1,4 +1,4 @@
-from os.path import isfile, isdir, splitext
+from os.path import isdir
 
 starting_path = "Y://Retention//All//Retention All//"
 
@@ -10,15 +10,10 @@ import sys
 
 sys.path.append(f'{starting_path}with_python//')
 
-import os
 import datetime
 import pandas as pd
 
 pd.options.mode.chained_assignment = None
-from P2P import queries
-from E_Sports import queries as e_queries
-from pyodbc import connect
-from shutil import move, rmtree
 
 today_date = datetime.datetime.today().date()
 yesterday = today_date - datetime.timedelta(1)
@@ -867,8 +862,8 @@ import datetime
 import pandas as pd
 
 pd.options.mode.chained_assignment = None
-from P2P import queries
-from E_Sports import queries as e_queries
+import queries
+import E_sports_queries as e_queries
 from pyodbc import connect
 from shutil import move, rmtree
 
